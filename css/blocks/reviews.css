@@ -1,0 +1,104 @@
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  min-height: 46.4rem;
+}
+
+.container__reviews {
+  margin: 0 auto;
+  min-height: 650px;
+}
+
+.reviews__title {
+  text-transform: uppercase;
+  font-size: 3.1429rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.reviews__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F8FAF9;
+  padding: 2.7857rem;
+}
+
+.reviews__card {
+  margin-top: 1.4286rem;
+}
+
+.user__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 1.4286rem;
+  margin-right: 12.8571rem;
+}
+
+.user__title {
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+  font-size: 1.7143rem;
+}
+
+.user__review {
+  margin-top: 0.7143rem;
+  margin-bottom: 0;
+  font-size: 1.0714rem;
+}
+
+.user__name {
+  margin-top: 0.7143rem;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 1.4286rem 0 0 0;
+  padding: 0;
+}
+
+.avatar__user {
+  height: 5.2857rem;
+  width: 5.2857rem;
+  margin-right: 1.4286rem;
+}
+
+.avatar__user-image {
+  border-radius: 3.5714rem;
+}
+
+.avatar__user-image--active {
+  border: 0.3571rem solid #FEDB3F;
+  height: 5rem;
+  width: 5rem;
+}
+
+.avatar__user:last-child {
+  margin-right: 0;
+}

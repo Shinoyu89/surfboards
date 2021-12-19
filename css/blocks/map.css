@@ -1,0 +1,77 @@
+.destination {
+  background: url("../../images/map.png") center center/cover no-repeat;
+}
+
+.footer__white {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: black;
+}
+
+.address__phone--black {
+  color: black;
+}
+
+.phone-black {
+  background-color: black;
+}
+
+.address__contacts {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.socials__item {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+
+.socials__item:last-child {
+  margin-right: 0px;
+}
+
+.socials__item--vk {
+  background: url("../../images/css_sprites.png"), -142px -10px;
+  overflow: hidden;
+}
+
+.socials__item--f {
+  background: url("../../images/css_sprites.png"), -10px -10px;
+  overflow: hidden;
+}
+
+.socials__item--in {
+  background: url("../../images/css_sprites.png"), -54px -10px;
+  overflow: hidden;
+}
+
+.socials__item--twitter {
+  background: url("../../images/css_sprites.png"), -98px -10px;
+  overflow: hidden;
+}

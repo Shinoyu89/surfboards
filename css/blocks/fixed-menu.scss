@@ -1,0 +1,51 @@
+$baseFontSize: 16px;
+$containerWidth: 1100px;
+$yellow: #FEDB3F;
+$lightgrey: #F8FAF9;
+$grey: #666;
+$darkgrey: #1A1B1E;
+$white: white;
+$black: black;
+$z-fixed-menu: 100;
+
+
+.fixed-menu {
+    position: fixed;
+    top:20%;
+    right: 20%;
+    z-index: $z-fixed-menu;
+
+}
+
+.fixed-menu__item{
+    margin-bottom: 0.36rem;
+
+
+    &--active {
+       .fixed-menu__link {
+            border-color: $white;
+       }
+    }
+}
+
+.fixed-menu__link{
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    display: block; 
+    position: relative;
+
+    &:before {
+        content:"";
+        display: block;
+        width: 0.43rem;
+        height: 0.43rem;
+        border-radius: 50%;
+        background: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

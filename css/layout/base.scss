@@ -1,0 +1,116 @@
+$baseFontSize: 14px;
+$containerWidth: 1100px;
+$yellow: #FEDB3F;
+$lightgrey: #F8FAF9;
+$grey: #666;
+$darkgrey: #1A1B1E;
+$white: white;
+$black: black;
+$z-fixed-menu: 100;
+$tablets: 768px;
+$phones: 480px;
+
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+html {
+    font-size: $baseFontSize;
+
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
+
+}
+
+body {
+font-family: "AlegreyaSans", sans-serif;
+color: $grey;
+line-height: 1.42;
+background: $white;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+list-style: none;
+position: relative;
+}
+
+html, body {
+    height: 100%;
+}
+
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+.wrapper {
+    position: relative; 
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+
+.wrapper__content {
+    flex: 1;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 95%;
+    max-width: $containerWidth;
+    margin: 0 auto;
+    position: relative; 
+   
+}
+
+.button {
+    height: 4.5rem;  
+    width: 11rem;
+    border: 0.125rem;
+    border-radius: 2.5rem;
+    padding: 1.125rem 1.125rem;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    margin-top: 2.5rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: $yellow;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+}
+
+* {
+    box-sizing: border-box;
+}
+

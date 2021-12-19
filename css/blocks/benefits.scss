@@ -1,0 +1,155 @@
+$baseFontSize: 16px;
+$containerWidth: 1100px;
+$yellow: #FEDB3F;
+$lightgrey: #F8FAF9;
+$grey: #666;
+$darkgrey: #1A1B1E;
+$white: white;
+$black: black;
+
+
+.section {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle__main {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.headline {
+    text-align: center;
+}
+
+.headline__title {
+    margin-bottom: 25px;
+
+}
+
+.benefits{
+    display: flex;
+
+}
+
+.benefits__content {
+    flex: 1;
+    padding: 0 3%;
+
+    &:before {
+        content:url(../../images/combined_shape.png);
+        position: absolute;
+        top: 320px;
+        transform: translate(200%);
+    }
+
+    
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+
+        &::before {
+            display: none
+        }
+    }
+}
+
+
+.benefit {
+    text-align: center;
+
+}
+
+.benefit__image--wrapper {
+    display: inline-block;
+    width: 126px;
+    height: 126px;
+    position:relative;
+    background: $lightgrey;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.benefit__icon {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 20%;
+    left:20%;
+    transform:translate (-50%, -50%)
+}
+
+
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+.subtitle__sub {
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 30%;
+
+}
+
+.benefits {
+    display: flex;
+    margin-top: 9.2857rem;
+
+}
+
+.benefits__cards {
+    display: flex;
+    justify-content: space-around;
+    min-width: 71.4286rem;
+    padding:0;
+
+}
+
+.benefits__content-image {
+    width: 8.8571rem;
+    height: 8.8571rem;
+    background: $lightgrey;
+    padding: 1.7857rem;
+    border-radius: 4.0714rem;
+
+}
+
+.benefits__content-title {
+    margin-bottom: 0;
+    margin-top: 2.1429rem;
+    font-size: 1.7143rem;
+    
+}
+
+.benefits__content-text {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    
+}
+
+.benefits__content-paragraph {
+    text-align: center;
+    font-size: 1.0714rem;
+    max-width: 20.4286rem;
+    max-height: 4.6429rem;
+    margin-top: 0.7143rem;
+
+}

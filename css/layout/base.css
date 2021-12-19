@@ -1,0 +1,85 @@
+html {
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: "AlegreyaSans", sans-serif;
+  color: #666;
+  line-height: 1.42;
+  background: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  list-style: none;
+  position: relative;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.wrapper__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.button {
+  height: 4.5rem;
+  width: 11rem;
+  border: 0.125rem;
+  border-radius: 2.5rem;
+  padding: 1.125rem 1.125rem;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  margin-top: 2.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: #FEDB3F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

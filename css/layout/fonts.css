@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "allegreya";
+  src: url("/fonts/AlegreyaSans-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "allegreya";
+  src: url("/fonts/AlegreyaSans-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "allegreya";
+  src: url("/fonts/AlegreyaSans-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
