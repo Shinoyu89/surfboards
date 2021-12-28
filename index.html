@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="./css/layout/normalize.css" />
     <link rel="stylesheet" href="./css/main.css"/>
     <title> Surfboard </title>
 </head>
@@ -64,6 +64,11 @@
                         </a>
                       </address>
                       </div>
+                      <a href="" class="hamburger">
+                          <span class="hamburger__plank"></span>
+                          <span class="hamburger__plank"></span>
+                          <span class="hamburger__plank"></span>
+                      </a>
                     </header> <!-- End Header -->
 
 <div class="hero__title-section">
@@ -230,7 +235,7 @@
 
         <section class="section__form">
                 <div class="container form__container">
-            <h2 class="inner-section__title" id="form-title"> закажите доску </h2>
+            <h2 class="inner-section__title" id="form-title"> закажите доставку </h2>
             
             <form class="form">
                 
@@ -333,9 +338,9 @@
             <section class="destination">
                 <div class="map">
                 
-                </div>
+              </div>
                 
-                        </section>
+                </section>
                 
 <section class="footer">
     <footer class="footer__white">
@@ -344,13 +349,25 @@
        
          <div class="address__phone--black">
             <a class="address__contacts" href="tel:+78009039090"> 
-                <svg id="phone-black" width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="phone-black" width="13" height="15" viewBox="0 0 13 15" fill="black" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1_51)">
-                <path d="M12.669 13.1545C12.4344 13.6557 11.9652 13.9063 11.4959 14.1569C10.9094 14.5327 10.4402 14.658 9.85367 14.658C9.03253 14.658 8.21139 14.2822 7.50756 14.0316C6.92103 13.781 6.45181 13.5304 5.86528 13.2798C4.223 12.1522 2.34611 10.1474 1.40767 8.51861C1.05575 7.89214 0.821139 7.39096 0.586528 6.76449C0.351917 5.88743 0 5.13567 0 4.13331C0 3.50684 0.117306 2.88037 0.469222 2.25389C0.703833 1.75272 0.938445 1.25154 1.40767 1.00095C1.75958 1.00095 2.34611 0.875656 2.69803 0.875656C2.81533 0.875656 2.81533 0.875656 2.93264 0.875656C3.16725 1.00095 3.28456 1.37683 3.40186 1.62742C3.63647 2.25389 3.98839 2.75507 4.223 3.38154C4.45761 3.63213 4.69222 3.88272 4.69222 4.13331C4.69222 4.75978 3.04994 5.63684 3.04994 6.13802C3.04994 6.38861 3.28456 6.76449 3.40186 7.01508C4.34031 8.7692 5.51336 10.0221 7.15564 11.0245C7.39025 11.1498 7.74217 11.4004 7.97678 11.4004C8.446 11.4004 9.26714 9.64626 9.85367 9.64626C10.0883 9.64626 10.3229 9.89685 10.5575 10.1474C11.0267 10.5233 11.6133 10.7739 12.0825 11.1498C12.3171 11.2751 12.669 11.4004 12.7863 11.651C12.7863 11.7763 12.7863 11.7763 12.7863 11.9016C12.9036 12.1522 12.7863 12.7786 12.669 13.1545Z" fill="white"/>
+                <path d="M12.669 13.1545C12.4344 13.6557 11.9652 13.9063 11.4959 14.1569C10.9094 14.5327 10.4402 14.658 9.85367 
+                14.658C9.03253 14.658 8.21139 14.2822 7.50756 14.0316C6.92103 13.781 6.45181 13.5304 5.86528 
+                13.2798C4.223 12.1522 2.34611 10.1474 1.40767 8.51861C1.05575 7.89214 0.821139 7.39096 0.586528 
+                6.76449C0.351917 5.88743 0 5.13567 0 4.13331C0 3.50684 0.117306 2.88037 0.469222 2.25389C0.703833 
+                1.75272 0.938445 1.25154 1.40767 1.00095C1.75958 1.00095 2.34611 0.875656 2.69803 0.875656C2.81533 
+                0.875656 2.81533 0.875656 2.93264 0.875656C3.16725 1.00095 3.28456 1.37683 3.40186 1.62742C3.63647 
+                2.25389 3.98839 2.75507 4.223 3.38154C4.45761 3.63213 4.69222 3.88272 4.69222 
+                4.13331C4.69222 4.75978 3.04994 5.63684 3.04994 6.13802C3.04994 6.38861 3.28456 6.76449 
+                3.40186 7.01508C4.34031 8.7692 5.51336 10.0221 7.15564 11.0245C7.39025 11.1498 7.74217 
+                11.4004 7.97678 11.4004C8.446 11.4004 9.26714 9.64626 9.85367 9.64626C10.0883 9.64626 
+                10.3229 9.89685 10.5575 10.1474C11.0267 10.5233 11.6133 10.7739 12.0825 11.1498C12.3171 
+                11.2751 12.669 11.4004 12.7863 11.651C12.7863 11.7763 12.7863 11.7763 12.7863 
+                11.9016C12.9036 12.1522 12.7863 12.7786 12.669 13.1545Z" fill="black"/>
                 </g>
                 <defs>
                 <clipPath id="clip0_1_51">
-                <rect width="12.9036" height="13.7824" fill="white" transform="translate(0 0.875656)"/>
+                <rect width="12.9036" height="13.7824" fill="black" transform="translate(0 0.875656)"/>
                 </clipPath>
                 </defs>
                 </svg> 
@@ -358,23 +375,44 @@
             </a>
         </div>
     </address> 
+
+
+
         <ul class="socials"> 
           
             <li class="socials__item"> 
-                <a class="socials__item socials__item--vk" href="https://vk.com/">            
+                  <svg class="phone-item">
+                    <use xlink:href="./css/blocks/sprite.svg#vk">
+                        </use>
+                        <a class="socials__item socials__item--vk" href="https://vk.com/">            
+                        </a>
+                    </svg>
+                    <a class="socials__item socials__item--vk" href="https://vk.com/">            
                 </a> 
             </li>
             <li class="socials__item"> 
+                <svg class="phone-item">
+                    <use xlink:href="./css/blocks/sprite.svg#f">
+                        </use>
+                    </svg>
                 <a class="socials__item socials__item--f" href="https://www.facebook.com/">  
                 </a> 
             </li>
             <li class="socials__item"> 
                 <a class="socials__item socials__item--in" href="https://www.instagram.com/">  
                 </a> 
+                <svg class="phone-item">
+                    <use xlink:href="./css/blocks/sprite.svg#in">
+                        </use>
+                    </svg>
             </li>
             <li class="socials__item"> 
                 <a class="socials__item socials__item--twitter" href="https://twitter.com/">  
                 </a> 
+                <svg class="phone-item">
+                    <use xlink:href="./css/blocks/sprite.svg#tw">
+                        </use>
+                </svg>
             </li>
          </ul>  
         
@@ -417,7 +455,7 @@
                 </li>
             </ul>
         </nav>
-    </div><!-- End Wrapper -->
+    </div> <!-- End Wrapper -->
 
 </body>
 </html>
