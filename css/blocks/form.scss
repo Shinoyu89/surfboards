@@ -369,6 +369,8 @@ $phones: 480px;
 }
 
 .form__buttons {
+    min-width:10rem;
+    
     @include tablets{
         margin: 0 auto;
     }
