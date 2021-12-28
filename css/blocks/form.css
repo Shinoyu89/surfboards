@@ -375,7 +375,7 @@
   font-size: 1.2rem;
 }
 
-.form__button {
+.form__buttons {
   min-height: 10rem;}
 
 @media screen and (max-width: 768px) {
