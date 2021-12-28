@@ -6,7 +6,39 @@ $grey: #666;
 $darkgrey: #1A1B1E;
 $white: white;
 $black: black;
+$z-fixed-menu: 100;
+$tablets: 768px;
+$phones: 480px;
 
+
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+html {
+    font-size: $baseFontSize;
+
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
+
+}
 
 .section {
     min-height: 650px;
@@ -21,6 +53,10 @@ $black: black;
     margin-bottom: 60px;
     text-align: center;
     text-transform: uppercase;
+
+    @include phones{
+        font-size: 2.5rem;
+    }
 }
 
 
@@ -35,6 +71,13 @@ $black: black;
 
 .benefits{
     display: flex;
+    margin-top: 5rem;
+
+    @include phones{
+        flex-direction: column;
+        padding: 0;
+        margin: 2rem auto 0;
+    }
 
 }
 
@@ -45,13 +88,19 @@ $black: black;
     &:before {
         content:url(../../images/combined_shape.png);
         position: absolute;
-        top: 320px;
+        top: 280px;
         transform: translate(200%);
+    @include tablets {
+        display: none;
+    }
     }
 
     
     &:first-child {
         padding-left: 0;
+        @include phones{
+            padding-left: 3%;
+        }
     }
 
     &:last-child {
@@ -60,6 +109,11 @@ $black: black;
         &::before {
             display: none
         }
+    }
+
+    @include phones{
+        display: flex;
+        
     }
 }
 
@@ -74,7 +128,7 @@ $black: black;
     width: 126px;
     height: 126px;
     position:relative;
-    background: $lightgrey;
+    background: grey;
     border-radius: 50%;
     overflow: hidden;
 
@@ -105,13 +159,13 @@ $black: black;
     text-align: center;
     padding: 0 30%;
 
-}
-
-.benefits {
-    display: flex;
-    margin-top: 9.2857rem;
+    @include phones{
+        padding: 0 5%;
+    }
 
 }
+
+
 
 .benefits__cards {
     display: flex;
@@ -124,7 +178,7 @@ $black: black;
 .benefits__content-image {
     width: 8.8571rem;
     height: 8.8571rem;
-    background: $lightgrey;
+    background: $darkgrey;
     padding: 1.7857rem;
     border-radius: 4.0714rem;
 
@@ -152,4 +206,11 @@ $black: black;
     max-height: 4.6429rem;
     margin-top: 0.7143rem;
 
+}
+
+.benefit__text{
+    @include phones {
+        text-align: left;
+        padding-left: 1.5rem;
+    }
 }

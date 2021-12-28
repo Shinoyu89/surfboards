@@ -37,12 +37,12 @@ $phones: 480px;
 
 .hero {
     background: url(../../images/background.png) center center / cover no-repeat;
-    height: 50vh;
-    min-height: 650px;
+    min-height: 46.4rem;
     display: flex;
     flex-direction: column;
     color: $white;
-    }
+}
+
 
 .hero__container{
     display: flex;
@@ -58,11 +58,22 @@ $phones: 480px;
     padding: 1.25rem 0rem;
     min-height: 5rem;
     width: 100%;
-    display: flex;
-    align-items:center;
-    }
+    align-items: center;
+    text-align: center;
+
+    @include tablets {
+      justify-content: space-between;
+      background: #1968B1;
+  }
+}
+
+.logo {
+    margin-left: 1rem;
+}
 
 .nav {
+    margin: 0px;
+
     @include tablets {
         display: none;
     }
@@ -71,12 +82,13 @@ $phones: 480px;
 .nav__list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     list-style: none;
-    padding-left: 2.5rem;
     font-size: 1.25rem;
     color: $white;
     font-weight: 700;
+    flex-wrap: wrap;
+    padding: 0;
         
     }
 
@@ -95,6 +107,7 @@ $phones: 480px;
 .nav__link{
     text-decoration: none;
     color: $white;
+    white-space: nowrap;
 }
 
 .contacts__phone{
@@ -109,20 +122,47 @@ $phones: 480px;
     font-size: 20px;
     text-decoration: none;
     color: $white;
+    white-space: nowrap;
+}
+
+.contacts__number, .header__phone-number {
+    @include tablets {
+        display: none;
+    }
 }
 
 .hero__title-section {
     display: flex;
     flex-direction: column;
-    max-width: 46%;
+    width: 46%;
     margin-left: 6.5625rem;
     margin-top: 1.5625rem;
-
+    
+    @include tablets{
+        width: 100%;
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1rem;
+        align-items: center;
+        text-align: center;
+        
+     }
 }
+
 .hero__main-title {
     text-transform: uppercase;
     font-size: 2.75rem;
     margin-bottom: 0;
+
+    @include tablets{
+        max-width: 47rem;
+    }
+
+    @include phones{
+        font-size: 2.5rem;
+    }
 }
 
 .hero__subtitle {
@@ -133,13 +173,18 @@ $phones: 480px;
 .hero__icon {
     display: flex;
     margin-left: 6.5625rem;
-    margin-top: 3.4375rem;
+    margin-top: 7rem;
     padding: 0;
     font-size: 1rem;
     font-weight: 700;
     width: 3.2143rem;
     height: 3.2143rem;
+
+    @include tablets{
+        display: none;
+    }
 }
+
 
 .icon {
     display: flex;

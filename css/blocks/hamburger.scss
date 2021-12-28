@@ -1,0 +1,58 @@
+$baseFontSize: 14px;
+$containerWidth: 1100px;
+$yellow: #FEDB3F;
+$lightgrey: #F8FAF9;
+$grey: #666;
+$darkgrey: #1A1B1E;
+$white: white;
+$black: black;
+$z-fixed-menu: 100;
+$tablets: 768px;
+$phones: 480px;
+
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+        
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+.tablets {
+@include tablets;
+}
+
+.phones {
+@include phones;
+}
+
+.hamburger {
+    width: 24px;
+    height: 20px;
+    align-items: right;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+
+    @include tablets {
+        display: inline-flex;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+}
+
+.hamburger__plank {
+    display: block;
+    background: $white;
+    height: 4px;
+    border-radius: 10px;
+}

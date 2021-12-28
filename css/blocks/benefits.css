@@ -1,3 +1,17 @@
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 .section {
   min-height: 650px;
   display: -webkit-box;
@@ -19,6 +33,11 @@
   text-align: center;
   text-transform: uppercase;
 }
+@media screen and (max-width: 480px) {
+  .subtitle__main {
+    font-size: 2.5rem;
+  }
+}
 
 .headline {
   text-align: center;
@@ -32,6 +51,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 5rem;
+}
+@media screen and (max-width: 480px) {
+  .benefits {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin: 2rem auto 0;
+  }
 }
 
 .benefits__content {
@@ -43,18 +73,35 @@
 .benefits__content:before {
   content: url(../../images/combined_shape.png);
   position: absolute;
-  top: 320px;
+  top: 280px;
   -webkit-transform: translate(200%);
           transform: translate(200%);
 }
+@media screen and (max-width: 768px) {
+  .benefits__content:before {
+    display: none;
+  }
+}
 .benefits__content:first-child {
   padding-left: 0;
+}
+@media screen and (max-width: 480px) {
+  .benefits__content:first-child {
+    padding-left: 3%;
+  }
 }
 .benefits__content:last-child {
   padding-right: 0;
 }
 .benefits__content:last-child::before {
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .benefits__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .benefit {
@@ -66,7 +113,7 @@
   width: 126px;
   height: 126px;
   position: relative;
-  background: #F8FAF9;
+  background: grey;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -99,12 +146,10 @@
   text-align: center;
   padding: 0 30%;
 }
-
-.benefits {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 9.2857rem;
+@media screen and (max-width: 480px) {
+  .subtitle__sub {
+    padding: 0 5%;
+  }
 }
 
 .benefits__cards {
@@ -120,7 +165,7 @@
 .benefits__content-image {
   width: 8.8571rem;
   height: 8.8571rem;
-  background: #F8FAF9;
+  background: #1A1B1E;
   padding: 1.7857rem;
   border-radius: 4.0714rem;
 }
@@ -151,4 +196,11 @@
   max-width: 20.4286rem;
   max-height: 4.6429rem;
   margin-top: 0.7143rem;
+}
+
+@media screen and (max-width: 480px) {
+  .benefit__text {
+    text-align: left;
+    padding-left: 1.5rem;
+  }
 }

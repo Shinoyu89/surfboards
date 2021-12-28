@@ -7,6 +7,34 @@ $darkgrey: #1A1B1E;
 $white: white;
 $black: black;
 $z-fixed-menu: 100;
+$tablets: 768px;
+$phones: 480px;
+
+
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+        
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+.tablets {
+@include tablets;
+}
+
+.phones {
+@include phones;
+}
 
 
 .fixed-menu {
@@ -15,6 +43,9 @@ $z-fixed-menu: 100;
     right: 20%;
     z-index: $z-fixed-menu;
 
+    @include tablets{
+        display:none;
+    }
 }
 
 .fixed-menu__item{
@@ -49,3 +80,8 @@ $z-fixed-menu: 100;
         transform: translate(-50%, -50%);
     }
 }
+
+.fixed-menu__list {
+        padding-right: 3rem;
+        padding-left:0;
+    }

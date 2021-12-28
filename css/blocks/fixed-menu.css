@@ -4,6 +4,11 @@
   right: 20%;
   z-index: 100;
 }
+@media screen and (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
+}
 
 .fixed-menu__item {
   margin-bottom: 0.36rem;
@@ -32,4 +37,9 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.fixed-menu__list {
+  padding-right: 3rem;
+  padding-left: 0;
 }

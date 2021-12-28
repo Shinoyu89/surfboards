@@ -8,29 +8,64 @@ $darkgrey: #1A1B1E;
 $white: white;
 $black: black;
 $z-fixed-menu: 100;
+$tablets: 768px;
+$phones: 480px;
 
+
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+        
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+.tablets {
+@include tablets;
+}
+
+.phones {
+@include phones;
+}
 
 .destination {
     background: url("../../images/map.png") center center/cover no-repeat;
+    
 }   
+
+.map {
+    min-height: 90vh;
+    display: flex;
+
+    @include tablets{
+        max-width: $tablets;
+        flex-shrink:shrink;
+    }
+}
 
 .footer__white {
     display: flex;
     justify-content: space-between;
+
+    @include phones{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .address {
     display: flex;
     flex-direction: column;
     color: $black;
-}
-
-.address__phone--black {
-    color: $black;
-}
-
-.phone-black {
-    background-color: $black;
 }
 
 .address__contacts {
@@ -58,21 +93,22 @@ $z-fixed-menu: 100;
 }
 
 .socials__item--vk {
-    background: url("../../images/css_sprites.png"), -142px -10px;
+    background: url('css_sprites.svg') -10px -10px;
     overflow: hidden;
+    fill: $black;
 }
 
 .socials__item--f {
-    background: url("../../images/css_sprites.png"), -10px -10px;
+    background: url("../../images/css_sprites.svg"), -50px -10px;
     overflow: hidden;
 }
 
 .socials__item--in {
-    background:  url("../../images/css_sprites.png"), -54px -10px;
+    background:  url("../../images/css_sprites.svg"), -90px -10px;
     overflow: hidden;
 }
 
 .socials__item--twitter {
-    background: url("../../images/css_sprites.png"), -98px -10px;
+    background: url("../../images/css_sprites.svg"), -130px -10px;
     overflow: hidden;
 }

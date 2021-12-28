@@ -8,9 +8,47 @@ $darkgrey: #1A1B1E;
 $white: white;
 $black: black;
 $z-fixed-menu: 100;
+$tablets: 768px;
+$phones: 480px;
+
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+        
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+.tablets {
+@include tablets;
+}
+
+.phones {
+@include phones;
+}
+
 
 .form {
     display: flex;
+    margin-top: 1rem;
+
+    @include tablets{
+        padding: 0 13%;
+    }
+
+    @include phones {
+        padding: 0 2%;
+        line-height: 1rem;
+    }
 }
 
 .section__form {
@@ -18,7 +56,13 @@ $z-fixed-menu: 100;
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    height: 47.1429rem;
+    
+
+    @include tablets {
+        margin-top: 2rem;
+        min-height: 69rem;
+    }
+
 }
 
 .inner-section__title{
@@ -35,6 +79,17 @@ $z-fixed-menu: 100;
     display: flex;
     flex-direction: row;
     
+    
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    @include phones{
+        margin: 0 auto;
+        max-width: $phones;
+    }
 }
 
 .form__title {
@@ -50,8 +105,16 @@ $z-fixed-menu: 100;
 
 .form {
     display: flex;
-    margin-left: 5.7143rem;
+    margin-left: 2rem;
     margin-top: 2.8571rem;
+
+    @include tablets {
+        margin: 0;
+    }
+
+    @include phones {
+        justify-content: flex-start;
+    }
 }
 
 .form__personal-data {
@@ -60,11 +123,29 @@ $z-fixed-menu: 100;
     justify-content: flex-start;
     max-width: 44.7857rem;
     margin-top: 1.0714rem;
+
+    @include tablets{
+        align-items: center;
+        min-width: 34rem;
+    }
 }
 
 .form__name-and-phone {
     display: flex;
+
     
+}
+
+.form__name-and-phone:last-child {
+    margin-right: 0;
+}
+
+.form__name-and-phone:first-child {
+    margin-right: 0.5rem;
+
+    @include tablets{
+        margin-right: 0;
+    }
 }
 
 .form__street {
@@ -74,16 +155,22 @@ $z-fixed-menu: 100;
 }
 
 .form__title-street {
-    width: 33rem;
+    width: 34rem;
+
+    @include phones {
+        width: 33rem;
+    }
 }
 
 .form__title-address {
     max-width: 7.1429rem;
     margin-top: 0;
+    margin-right: 0;
 }
 
 .form__address {
     display: flex;
+    justify-content: flex-start;
     margin-top: 1rem;
     
 }
@@ -91,15 +178,13 @@ $z-fixed-menu: 100;
 .form__comments-and-buttons {
     display: flex;
     flex-direction: column;
-    
     margin-top: 1rem;
 
 }
 
 
 .form__comment {
-    margin-left: 0.7143rem;
-    
+    margin: 0;
 }
 
 .form__input {
@@ -110,7 +195,7 @@ $z-fixed-menu: 100;
     padding-bottom: 1rem;
     font-size: 1.2857rem;
     color: $darkgrey;
-    margin-right: 1.0714rem;
+    margin-right: 1rem;
     
     &:placeholder {
         color: $black;
@@ -122,15 +207,24 @@ $z-fixed-menu: 100;
         outline: none;
         border-color: $yellow;
     }
+    &:last-child {
+        margin-right: 0;
 
+        @include phones{
+        margin:0;    
+        }
     }
+     }
 
 .form__input--textarea {
-    min-height: 11.0714rem;
-    min-width: 31.9286rem; 
+    min-height: 11rem;
+    min-width: 29rem; 
     
+    @include tablets{
+        max-height: rem;
+        min-width: 34rem;
+    }
 }
-
 
 .form__controls {
     display: flex;
@@ -141,6 +235,9 @@ $z-fixed-menu: 100;
         
 }
 
+.form__block {
+    padding-right: 1.3rem;
+}
 
 .form__controls-title {
     color: $darkgrey;
@@ -189,6 +286,7 @@ $z-fixed-menu: 100;
             background: url(../../images/checkmark.svg) center center/cover no-repeat;
         } 
     }
+    align-items: center;
 }
 }
 
@@ -268,4 +366,10 @@ $z-fixed-menu: 100;
     color: $white;
     font-weight: 300;
     font-size: 1.2rem;
+}
+
+.form__buttons {
+    @include tablets{
+        margin: 0 auto;
+    }
 }
